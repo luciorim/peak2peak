@@ -29,7 +29,7 @@ public class User implements UserDetails {
     private UUID id;
 
     @Column(name = "name", nullable = false)
-    private String name;
+    private String username;
 
     @Column(unique = true, nullable = false)
     private String email;

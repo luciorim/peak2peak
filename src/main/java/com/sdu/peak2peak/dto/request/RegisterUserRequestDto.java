@@ -1,5 +1,6 @@
 package com.sdu.peak2peak.dto.request;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Builder;
@@ -10,7 +11,7 @@ import lombok.Data;
 public class RegisterUserRequestDto {
 
     @NotNull
-    private String name;
+    private String username;
 
     @Size(min = 5, message = "Password should have minimum 5 characters")
     @NotNull
@@ -18,6 +19,7 @@ public class RegisterUserRequestDto {
 
     @Size(min = 5, message = "Password should have minimum 5 characters")
     @NotNull
+    @JsonProperty("confirm_password")
     private String confirmPassword;
 
     @NotNull
