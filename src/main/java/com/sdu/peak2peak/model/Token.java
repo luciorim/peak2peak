@@ -15,7 +15,7 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "token")
+@Table(name = "tokens")
 public class Token {
 
     @Id
